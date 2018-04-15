@@ -1,0 +1,1 @@
+window.SSH_LOGIN_MODE = true;
