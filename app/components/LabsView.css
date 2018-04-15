@@ -1,0 +1,11 @@
+.floor1 {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.floor2 {
+  position: absolute;
+  left: 230px;
+  top: 10px;
+}
