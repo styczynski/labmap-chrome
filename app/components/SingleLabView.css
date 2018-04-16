@@ -2,7 +2,6 @@
   z-index: 9999999999 !important;
 }
 
-
 .lab {
   width: 63px;
   height: 84px;
@@ -12,7 +11,7 @@
 
 .lab:hover {
   border: 1px solid black;
-  z-index: 99999999;
+  z-index: 9;
   font-weight: bold;
 }
 
@@ -23,7 +22,7 @@
   top: 10px;
   left: 10px;
   color: black;
-  z-index: 99999999;
+  z-index: 10;
 }
 
 .labIsUsedBadge {
@@ -34,12 +33,13 @@
   top: 15px;
   left: 30px;
   color: white;
-  z-index: 99999999;
+  z-index: 10;
   background-color: red;
   border-radius: 3px;
-  width: 50px;
+  /* width: 50px; */
   height: 20px;
   margin-top: 2px;
+  overflow: hidden;
 }
 
 .labIsUsedTimeBadge {
@@ -50,12 +50,13 @@
   top: 15px;
   left: 30px;
   color: white;
-  z-index: 99999999;
+  z-index: 10;
   background-color: red;
   border-radius: 3px;
-  width: 50px;
+  /*width: 50px;*/
   height: 20px;
   margin-top: 2px;
+  overflow: hidden;
 }
 
 
@@ -67,10 +68,10 @@
   top: 15px;
   left: 30px;
   color: white;
-  z-index: 99999999;
+  z-index: 10;
   background-color: blue;
   border-radius: 3px;
-  width: 50px;
+  /*width: 50px;*/
   height: 20px;
   margin-top: 2px;
 }
@@ -83,7 +84,7 @@
   top: 15px;
   left: 30px;
   color: white;
-  z-index: 99999999;
+  z-index: 10;
   background-color: green;
   border-radius: 3px;
   width: 20px;

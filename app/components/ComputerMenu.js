@@ -13,19 +13,20 @@ export default class ComputerMenu extends Component {
         <h1>Computer {computer.name}</h1>
         <ul>
           <li>
-            <b>State:</b>
-            {
-              (computer.state)?(computer.state):('unknown')
-            }
+            <b>
+              {
+                (computer.user)?(computer.user.name + ' ' + computer.user.surname):(null)
+              }
+            </b>
           </li>
           <li>
-            <b>User:</b>
             {
-              (computer.user)?(computer.user):('---')
+              (computer.state !== 'off')?(
+                <b>{'('+computer.state+')'}</b>
+              ):(null)
             }
           </li>
         </ul>
-        <span>Please click to do ssh login</span>
       </div>
     );
   }

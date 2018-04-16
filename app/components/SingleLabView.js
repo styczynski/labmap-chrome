@@ -48,10 +48,11 @@ export default class SingleLabView extends Component {
     if(isSubjectCurrentlyInside) {
       
       const courseEndMoment = moment(labPlan.end, "HH:mm");
-      
-      labelNodes.push(
-        <div key='is-used-label' className={style.labIsUsedBadge}>{labPlan.subjectName}</div>
-      );
+      if(labPlan.subjectName.trim().length > 0) {
+        labelNodes.push(
+          <div key='is-used-label' className={style.labIsUsedBadge}>{labPlan.subjectName}</div>
+        );
+      }
       labelNodes.push(
         <div key='is-used-time-label' className={style.labIsUsedTimeBadge}>{courseEndMoment.fromNow()}</div>
       );
@@ -82,22 +83,21 @@ export default class SingleLabView extends Component {
     }
     
     return (
-      <div className={labClassNames}>
-        <Tooltip
-          title="Welcome to React"
-          position="bottom"
-          trigger="click"
-          theme="light"
-          html={<LabDetails labNo={labNo} labPlan={labPlan} labStats={labStats}/>}
-          className={style.tooltip}
-          zIndex={999999999999}
-          interactive={true}
-          animateFill={false}
-        >
-          <div className={style.labLabel}>{labNo}</div>
-          {labelNodes}
-        </Tooltip>
-      </div>
+      <Tooltip
+        position="bottom"
+        trigger="click"
+        theme="light"
+        html={<LabDetails labNo={labNo} labPlan={labPlan} labStats={labStats}/>}
+        className={style.tooltip}
+        zIndex={999999999999}
+        interactive={true}
+        animateFill={false}
+      >
+          <div className={labClassNames}>
+            <div className={style.labLabel}>{labNo}</div>
+            {labelNodes}
+          </div>
+      </Tooltip>
     );
   }
 }

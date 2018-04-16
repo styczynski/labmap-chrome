@@ -10,7 +10,7 @@ const hotScript = 'webpack-hot-middleware/client?path=__webpack_hmr&dynamicPubli
 const baseDevConfig = () => ({
   devtool: 'eval-cheap-module-source-map',
   entry: {
-    todoapp: [customPath, hotScript, path.join(__dirname, '../chrome/extension/todoapp')],
+    labmap: [customPath, hotScript, path.join(__dirname, '../chrome/extension/labmap')],
     background: [customPath, hotScript, path.join(__dirname, '../chrome/extension/background')],
   },
   devMiddleware: {
@@ -56,7 +56,7 @@ const baseDevConfig = () => ({
       test: /\.css$/,
       use: [
         'style-loader',
-        'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+        'css-loader?url=false&modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
         {
           loader: 'postcss-loader',
           options: {

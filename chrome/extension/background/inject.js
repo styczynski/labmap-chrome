@@ -30,7 +30,7 @@ function loadScript(name, tabId, cb) {
   }
 }
 
-const arrowURLs = ['^https://github\\.com'];
+const arrowURLs = [];
 
 chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   if (changeInfo.status !== 'loading' || !tab.url.match(arrowURLs.join('|'))) return;
@@ -53,11 +53,19 @@ chrome.runtime.onMessage.addListener(async (request) => {
               focused: true
           });
       });
+  } else if(request.type === 'request-issue-form') {
+    chrome.tabs.create({
+        url: 'https://gitlab.com/styczynski/labmap-chrome/issues/new',
+        active: false
+    }, function(tab) {
+        chrome.windows.create({
+            tabId: tab.id,
+            type: 'popup',
+            focused: true,
+            width: 100,
+            height: 50,
+            CreateType: 'popup'
+        });
+    });
   }
-});
-
-chrome.browserAction.onClicked.addListener(function (tab) {
-	chrome.tabs.executeScript(tab.id, {
-		file: 'static-popup-src/inject.js'
-	});
 });

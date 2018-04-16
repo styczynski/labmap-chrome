@@ -7,26 +7,36 @@ const labsFloor2 = [3041, 3042, 3043, 3044, 3045];
 
 export default class LabsView extends Component {
 
-  componentDidMount() {
-    const {actions, labData} = this.props;
-    
-    labsFloor1.concat(labsFloor2).forEach((lab) => {
-      actions.requestLabDataUpdate(lab);
-      actions.requestPlanUpdate(lab);
-    });
-  }
-
   render() {
     
-    const {actions, plan, labData} = this.props;
+    const {actions, plan, lastUpdateTimestamp, labData} = this.props;
+    
+    if(!plan.fetchInProgress && lastUpdateTimestamp > 0) {
+      if((+new Date())-lastUpdateTimestamp > 30000) {
+        actions.requestStatsUpdate();
+        console.log(plan.lastUpdateTimestamp);
+        labsFloor1.concat(labsFloor2).forEach((lab) => {
+          actions.requestLabDataUpdate(lab);
+          actions.requestPlanUpdate(lab);
+        });
+      } else {
+        console.log("CACHE REQUEST");
+      }
+    }
     
     return (
-      <figure>
+      <figure className={style.labsView}>
         <div className={style.floor1} >
           {
             labsFloor1.map((labNo) => {
               return (
-                <SingleLabView key={'lab'+labNo} plan={plan} labData={labData} labNo={labNo} />
+                <SingleLabView
+                  key={'lab'+labNo}
+                  plan={plan}
+                  labData={labData}
+                  labNo={labNo}
+                  lastUpdateTimestamp={lastUpdateTimestamp}
+                />
               )
             })
           }
@@ -35,7 +45,13 @@ export default class LabsView extends Component {
           {
             labsFloor2.map((labNo) => {
               return (
-                <SingleLabView key={'lab'+labNo} plan={plan} labData={labData} labNo={labNo} />
+                <SingleLabView
+                  key={'lab'+labNo}
+                  plan={plan}
+                  labData={labData}
+                  labNo={labNo}
+                  lastUpdateTimestamp={lastUpdateTimestamp}
+                />
               )
             })
           }

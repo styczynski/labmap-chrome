@@ -1,10 +1,10 @@
 {
-  "version": "0.0.0",
-  "name": "react-chrome-extension-example",
+  "version": "1.0.0",
+  "name": "Labmap Chrome",
   "manifest_version": 2,
-  "description": "Example for react-chrome-extension-boilerplate",
+  "description": "Map of labolatories at MIM UW by @miskow and @styczynski",
   "browser_action": {
-    "default_title": "React Chrome Extension Example",
+    "default_title": "Labmap Chrome",
     "default_popup": "popup.html"
   },
   "icons": {
@@ -13,7 +13,8 @@
     "128": "img/icon-128.png"
   },
   "web_accessible_resources": [
-    "inject.html"
+    "inject.html",
+    "fonts/*.ttf"
   ],
   "background": {
     "page": "background.html"
@@ -23,10 +24,7 @@
     "management",
     "tabs",
     "activeTab",
-    "storage",
-    "https://*/*",
-    "http://*/*",
-    "ssh://*/*"
+    "storage"
   ],
-  "content_security_policy": "default-src 'self'; script-src 'self' chrome-extension://hinpgfpeomjglbdkhjgjohojodoohcjp http://localhost:3000 https://localhost:3000 'unsafe-eval'; connect-src http://localhost:3000 https://localhost:3000 http://students.mimuw.edu.pl/; style-src * 'unsafe-inline' 'self' blob:; img-src 'self' data:;"
+  "content_security_policy": "default-src 'self'; script-src 'self' http://localhost:3000 https://localhost:3000 'unsafe-eval'; connect-src http://localhost:3000 https://localhost:3000 http://students.mimuw.edu.pl/; style-src * 'unsafe-inline' 'self' blob:; img-src 'self' data:;"
 }

@@ -1,15 +1,13 @@
 @font-face {
  font-family: 'Tajawal';
  font-style: normal;
- src: url('chrome-extension://hinpgfpeomjglbdkhjgjohojodoohcjp/fonts/Tajawal-Light.ttf'); 
+ src: url('chrome-extension://__MSG_@@extension_id__/fonts/Tajawal-Light.ttf'); 
 }
 
 .normal {
   background: #fff;
-  margin: 20px 0 40px 0;
   position: relative;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
-              0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  user-select: none;
 }
 
 .normal h1 {

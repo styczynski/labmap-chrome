@@ -1,3 +1,9 @@
+.labsView {
+  position: relative;
+  top: -7px;
+  left: -50px;
+}
+
 .floor1 {
   position: absolute;
   left: 10px;

@@ -17,7 +17,9 @@ export default function () {
     const store = next(reducer, initialState);
     store.subscribe(() => {
       const state = store.getState();
-      saveState(state);
+      if(!state.dataEvents.plan.fetchInProgress) {
+        saveState(state);
+      }
       setBadge(state.dataEvents.labData);
     });
     return store;

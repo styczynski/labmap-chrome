@@ -3,7 +3,8 @@ doctype html
 html
   head
     meta(charset='UTF-8')
-    title Redux TodoMVC Example (Inject)
+    title LabMap Chrome
+    link(href='font.css' rel='stylesheet' type='text/css')
     style.
       html, body {
         background-color: rgba(0,0,0,0)
@@ -12,4 +13,4 @@ html
     #root
     if env !== 'prod'
       script(src='chrome-extension://lmhkpmbekcpmknklioeibfkpmmfibljd/js/redux-devtools-extension.js')
-    script(src=env == 'prod' ? '/js/todoapp.bundle.js' : 'https://localhost:3000/js/todoapp.bundle.js')
+    script(src=env == 'prod' ? '/js/labmap.bundle.js' : 'https://localhost:3000/js/labmap.bundle.js')

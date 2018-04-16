@@ -37,7 +37,7 @@ export default class SingleLabView extends Component {
       }
     }
     
-    const computerIconsNodes = labStats.computers.map((computer) => {
+    const computerIconsNodes = (labStats.computers || []).map((computer) => {
       let classNames = style.labCompIcon;
       
       if(computer.state == 'off') {
@@ -51,7 +51,7 @@ export default class SingleLabView extends Component {
       return (
         <div key={computer.name} className={classNames}>
           <div onClick={function(){
-            chrome.runtime.sendMessage({type:'request-ssh-login'});
+            //chrome.runtime.sendMessage({type:'request-ssh-login'});
           }} className={style.computerNo}>
             <Tooltip
               position="bottom"
@@ -82,11 +82,17 @@ export default class SingleLabView extends Component {
             (isSubjectCurrentlyInside)?(
               <li className={style.labUsedMessage}>Used by course group now.</li>
             ):(
-              <li>Free computers: {labStats.freeCount}/{labStats.computers.length}</li>
+              <li>
+                <b>Free computers: {labStats.freeCount}/{labStats.computers.length}</b>
+              </li>
             )
           }
           {
-            (labPlan.start)?(<li>{nextCurrentSubjText} subject: {labPlan.subjectName}</li>):(null)
+            (labPlan.start)?(
+              <li>{nextCurrentSubjText} subject:
+                <b>{labPlan.subjectName}</b>
+              </li>
+            ):(null)
           }
           {
             (labPlan.start)?(<li>{labPlan.start} - {labPlan.end}</li>):(null)

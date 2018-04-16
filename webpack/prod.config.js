@@ -6,7 +6,7 @@ const customPath = path.join(__dirname, './customPublicPath');
 
 module.exports = {
   entry: {
-    todoapp: [customPath, path.join(__dirname, '../chrome/extension/todoapp')],
+    labmap: [customPath, path.join(__dirname, '../chrome/extension/labmap')],
     background: [customPath, path.join(__dirname, '../chrome/extension/background')],
     inject: [customPath, path.join(__dirname, '../chrome/extension/inject')]
   },
@@ -45,7 +45,7 @@ module.exports = {
       test: /\.css$/,
       use: [
         'style-loader',
-        'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+        'css-loader?url=false&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
         {
           loader: 'postcss-loader',
           options: {
