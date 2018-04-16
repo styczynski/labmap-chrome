@@ -1,5 +1,4 @@
-# labmap Chrome Extension
-
+#  :) ![Image](https://raw.githubusercontent.com/styczynski/labmap-chrome/master/chrome/assets/img/icon-48.png) labmap Chrome Extension
 > [labmap](https://github.com/tomasz-miskow/labmap) ported to Chrome
 
 ## :mag: About
@@ -18,6 +17,8 @@ This project is maintained in free time. **Feel free to contribute and open new 
 * View incoming courses inside labs :smile:
 * Connect to `students.mimuw.edu.pl` machine via SSH with one button (needs external extension) :+1:
 * View users currently sitting in labs :tada:
+
+![Screenshot](https://raw.githubusercontent.com/styczynski/labmap-chrome/master/static/screenshot.png)
 
 ## :package: Installation
 
@@ -43,7 +44,7 @@ $ yarn install
 $ yarn run dev
 ```
 
-**Now navigate to Settings->Extensions inside Chrome and select "Load unpacked" then specify the /dev folder**
+**Now navigate to Settings->Extensions inside Chrome and select "Load unpacked" then specify the /dev folder*
 
 The extension should be now visible inside Chrome.
 
