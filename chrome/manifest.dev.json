@@ -18,6 +18,15 @@
   "background": {
     "page": "background.html"
   },
-  "permissions": [ "contextMenus", "management", "tabs", "storage", "https://github.com/*" ],
+  "permissions": [
+    "contextMenus",
+    "management",
+    "tabs",
+    "activeTab",
+    "storage",
+    "https://*/*",
+    "http://*/*",
+    "ssh://*/*"
+  ],
   "content_security_policy": "default-src 'self'; script-src 'self' chrome-extension://hinpgfpeomjglbdkhjgjohojodoohcjp http://localhost:3000 https://localhost:3000 'unsafe-eval'; connect-src http://localhost:3000 https://localhost:3000 http://students.mimuw.edu.pl/; style-src * 'unsafe-inline' 'self' blob:; img-src 'self' data:;"
 }

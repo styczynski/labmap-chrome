@@ -55,3 +55,9 @@ chrome.runtime.onMessage.addListener(async (request) => {
       });
   }
 });
+
+chrome.browserAction.onClicked.addListener(function (tab) {
+	chrome.tabs.executeScript(tab.id, {
+		file: 'static-popup-src/inject.js'
+	});
+});
