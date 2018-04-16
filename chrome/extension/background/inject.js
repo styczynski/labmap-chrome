@@ -55,7 +55,7 @@ chrome.runtime.onMessage.addListener(async (request) => {
       });
   } else if(request.type === 'request-issue-form') {
     chrome.tabs.create({
-        url: 'https://gitlab.com/styczynski/labmap-chrome/issues/new',
+        url: 'https://github.com/styczynski/labmap-chrome/issues/new',
         active: false
     }, function(tab) {
         chrome.windows.create({
