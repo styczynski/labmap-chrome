@@ -23,7 +23,17 @@ This project is maintained in free time. **Feel free to contribute and open new 
 ## :package: Installation
 
 This extension is currently not available in Chrome Store.<br>
-Only way to use it is to manually build the sources and load unpacked extension.
+Only way to use it is to do:
+
+```
+$ git clone "https://github.com/styczynski/labmap-chrome.git"
+$ cd labmap-chrome
+$ git checkout build
+```
+
+**Then goto Settings->Extensions switch Developer Mode to be on and press button "Load unpacked extension"**
+
+The extension should be now visible inside your Chrome.
 
 ## :bulb: Development
 
