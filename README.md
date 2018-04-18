@@ -1,4 +1,4 @@
-#  :) ![Image](https://raw.githubusercontent.com/styczynski/labmap-chrome/master/chrome/assets/img/icon-48.png) labmap Chrome Extension
+#  [:) ![Image](https://raw.githubusercontent.com/styczynski/labmap-chrome/master/chrome/assets/img/icon-48.png) labmap Chrome Extension](https://chrome.google.com/webstore/detail/labmap-chrome/jlckjaecjhjmcfcgphekojamfgdbjioe)
 > [labmap](https://github.com/tomasz-miskow/labmap) ported to Chrome
 
 ## :mag: About
@@ -24,9 +24,7 @@ This project is maintained in free time. **Feel free to contribute and open new 
 
 Install in Chrome via Chrome store:
 
-```
-  https://chrome.google.com/webstore/detail/labmap-chrome/jlckjaecjhjmcfcgphekojamfgdbjioe
-```
+> [labmap-chrome in Chrome store](https://chrome.google.com/webstore/detail/labmap-chrome/jlckjaecjhjmcfcgphekojamfgdbjioe)
 
 ## :bulb: Development
 
