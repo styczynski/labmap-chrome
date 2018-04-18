@@ -22,8 +22,11 @@ This project is maintained in free time. **Feel free to contribute and open new 
 
 ## :package: Installation
 
-This extension is currently not available in Chrome Store.<br>
-Only way to use it is to manually build the sources and load unpacked extension.
+Install in Chrome via Chrome store:
+
+```
+  https://chrome.google.com/webstore/detail/labmap-chrome/jlckjaecjhjmcfcgphekojamfgdbjioe
+```
 
 ## :bulb: Development
 
