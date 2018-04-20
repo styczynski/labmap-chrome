@@ -14,7 +14,7 @@ This project is maintained in free time. **Feel free to contribute and open new 
 ## :trophy: Features
 
 * See what computers and labs are currently free :cat:
-* View incoming courses inside labs :smile:
+* View upcoming courses inside labs :smile:
 * Connect to `students.mimuw.edu.pl` machine via SSH with one button (needs external extension) :+1:
 * View users currently sitting in labs :tada:
 
